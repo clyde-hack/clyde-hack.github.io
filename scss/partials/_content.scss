@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    section {
+        position: relative;
+        min-height: calc(100vh - $header-height);
+        padding: $content-padding;
+        scroll-snap-align: start;
+        scroll-margin-top: $header-height;
+
+        &:last-of-type {
+            min-height: calc(100vh - ($header-height + $footer-height));
+        }
+
+        &.full-width {
+            margin: 0 -#{$col-width};
+            min-height: calc(100vh - $header-height);
+        }
+
+    }
+}
+
+#table {
+    background-color: ghostwhite;
+}
+
+#headline-row,
+#list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: $baseline 0;
+
+    & > * {
+        margin: 0;
+    }
+}

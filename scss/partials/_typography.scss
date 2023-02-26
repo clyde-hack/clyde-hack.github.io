@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    line-height: $baseline;
+    color: #414141;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: calc($baseline * 2 - 1em) 0 $baseline;
+        font-weight: 600;
+        line-height: 1em;
+    }
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    margin: $baseline 0;
+    font-size: 1em;
+}
+
+blockquote {
+    margin: $baseline 0;
+    font-size: 1em;
+    font-style: italic;
+
+    &::before {
+        content: open-quote;
+    }
+
+    &::after {
+        content: close-quote;
+    }
+}
+
+ul,
+ol {
+    margin: $baseline 0;
+    padding-left: $baseline * 2;
+    font-size: 1em;
+}
+
+dl {
+    margin: $baseline 0;
+    font-size: 1em;
+
+    dt {
+        font-weight: 600;
+    }
+}
+
+small {
+    font-size: 0.75em;
+}
+
+b,
+strong {
+    font-weight: 600;
+}

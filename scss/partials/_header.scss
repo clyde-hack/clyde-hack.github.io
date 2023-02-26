@@ -1,0 +1,42 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: ghostwhite;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    & .logo {
+        font-size: 1em;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: teal;
+    }
+
+    & nav {
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            align-items: baseline;
+            margin: 0;
+            padding: 0;
+
+            li {
+                font-size: 0.875em;
+
+                & + li {
+                    margin-left: $baseline;
+                }
+
+                & > a {
+                    &.active {
+                        color: purple;
+                    }
+                }
+            }
+        }
+    }
+}

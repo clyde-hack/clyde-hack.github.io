@@ -1,0 +1,14 @@
+# Logs
+*.log
+
+# Application specific files
+node_modules
+.sass-cache
+
+# Thumbnails
+._*
+Thumbs.db
+
+# OSX
+.DS_Store
+Desktop.ini

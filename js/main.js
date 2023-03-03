@@ -26,20 +26,12 @@ function loadCards() {
 
 	fetchUsers().then((results) => {
 		results.data.forEach((item) => {
-			const user = new User(
-				item.first_name,
-				item.last_name,
-				item.email,
-				item.avatar
-			);
+			const user = new User(item.first_name, item.last_name, item.email, item.avatar);
 			const card = cardFrag.cloneNode(true).firstChild;
 
 			card.querySelector('img').setAttribute('src', user.avatar);
 			card.querySelector('h3').innerHTML = user.fullName();
-			card.querySelector('a').setAttribute(
-				'href',
-				`mailto:${user.email}`
-			);
+			card.querySelector('a').setAttribute('href', `mailto:${user.email}`);
 			card.querySelector('a').setAttribute('title', user.email);
 			card.querySelector('a').innerHTML = user.email;
 
@@ -83,9 +75,7 @@ class User {
 }
 
 async function fetchUsers() {
-	const response = await fetch(
-		`https://reqres.in/api/users?per_page=3&page=${page}`
-	);
+	const response = await fetch(`https://reqres.in/api/users?per_page=3&page=${page}`);
 	const results = await response.json();
 	return results;
 }

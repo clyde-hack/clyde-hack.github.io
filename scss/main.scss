@@ -8,90 +8,90 @@
 @import 'partials/footer';
 
 body {
-    background-color: ghostwhite;
+	background-color: ghostwhite;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $baseline;
-    margin: $baseline 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: $baseline;
+	margin: $baseline 0;
 
-    @media (min-width: 667px) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+	@media (min-width: 667px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 
-    @media (min-width: 1024px) {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+	@media (min-width: 1024px) {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-    grid-template-areas: 'avatar name' 'avatar email';
-    padding: math.div($baseline, 2);
-    background-color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.24s ease, box-shadow 0.24s ease;
+	display: grid;
+	grid-template-columns: 5rem 1fr;
+	grid-template-areas: 'avatar name' 'avatar email';
+	padding: math.div($baseline, 2);
+	background-color: white;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: transform 0.24s ease, box-shadow 0.24s ease;
 
-    &:hover {
-        transform: translateY(-#{math.div($baseline, 3)});
-        box-shadow: 0 4px 8px rgba(black, 0.12);
-    }
+	&:hover {
+		transform: translateY(-#{math.div($baseline, 3)});
+		box-shadow: 0 4px 8px rgba(black, 0.12);
+	}
 
-    img {
-        grid-area: avatar;
-        width: 4rem;
-        height: auto;
-        border-radius: 6px;
-    }
+	img {
+		grid-area: avatar;
+		width: 4rem;
+		height: auto;
+		border-radius: 6px;
+	}
 
-    h3 {
-        grid-area: name;
-        margin: 0;
-        font-weight: 500;
-    }
+	h3 {
+		grid-area: name;
+		margin: 0;
+		font-weight: 500;
+	}
 
-    a {
-        grid-area: email;
-        white-space: nowrap;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-        color: inherit;
-        font-size: 0.875em;
-        font-weight: 300;
+	a {
+		grid-area: email;
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		color: inherit;
+		font-size: 0.875em;
+		font-weight: 300;
 
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .paginate {
-    display: flex;
-    justify-content: center;
-    margin: $baseline 0;
+	display: flex;
+	justify-content: center;
+	margin: $baseline 0;
 
-    &__link {
-        display: inline-block;
-        width: 1rem;
-        text-align: center;
-        color: inherit;
-        font-size: 0.875em;
+	&__link {
+		display: inline-block;
+		width: 1rem;
+		text-align: center;
+		color: inherit;
+		font-size: 0.875em;
 
-        & ~ & {
-            margin-left: 1em;
-        }
+		& ~ & {
+			margin-left: 1em;
+		}
 
-        &:hover {
-            color: purple;
-        }
+		&:hover {
+			color: purple;
+		}
 
-        &.active {
-            color: purple;
-            border-bottom: 2px solid purple;
-        }
-    }
+		&.active {
+			color: purple;
+			border-bottom: 2px solid purple;
+		}
+	}
 }

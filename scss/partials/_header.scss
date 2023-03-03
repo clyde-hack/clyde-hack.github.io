@@ -1,42 +1,42 @@
 header {
-    position: sticky;
-    top: 0;
-    background-color: ghostwhite;
+	position: sticky;
+	top: 0;
+	background-color: ghostwhite;
 
-    .wrapper {
-        display: flex;
-        align-items: center;
-    }
+	.wrapper {
+		display: flex;
+		align-items: center;
+	}
 
-    & .logo {
-        font-size: 1em;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: teal;
-    }
+	& .logo {
+		font-size: 1em;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: teal;
+	}
 
-    & nav {
-        margin: 0 auto;
+	& nav {
+		margin: 0 auto;
 
-        ul {
-            display: flex;
-            align-items: baseline;
-            margin: 0;
-            padding: 0;
+		ul {
+			display: flex;
+			align-items: baseline;
+			margin: 0;
+			padding: 0;
 
-            li {
-                font-size: 0.875em;
+			li {
+				font-size: 0.875em;
 
-                & + li {
-                    margin-left: $baseline;
-                }
+				& + li {
+					margin-left: $baseline;
+				}
 
-                & > a {
-                    &.active {
-                        color: purple;
-                    }
-                }
-            }
-        }
-    }
+				& > a {
+					&.active {
+						color: purple;
+					}
+				}
+			}
+		}
+	}
 }
